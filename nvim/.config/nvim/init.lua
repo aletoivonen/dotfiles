@@ -1,2 +1,4 @@
-print("hello")
 
+print("init config")
+
+require("core.options")
