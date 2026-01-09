@@ -9,7 +9,7 @@ return {
     },
     config = function()
       vim.keymap.set('n', '<C-e>', ':Neotree filesystem reveal left<CR>')
-
+      -- vim.keymap.set('n', '<C-w>', ':
       require("neo-tree").setup({
         event_handlers = {
           {
