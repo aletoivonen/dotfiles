@@ -5,9 +5,36 @@ return {
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
+			{
+				"ownself/nvim-dap-unity",
+				build = function()
+					-- make sure adapter to be installed properly
+					require("nvim-dap-unity").install()
+				end,
+			},
 		},
 		config = function()
-			require("configs.nvim-dap")
+			-- require("configs.nvim-dap")
+			local dap = require("dap")
+			local dapui = require("dapui")
+
+      require("nvim-dap-unity").setup()
+
+			dap.listeners.before.attach.dapui_config = function()
+				dapui.open()
+			end
+			dap.listeners.before.launch.dapui_config = function()
+				dapui.open()
+			end
+			dap.listeners.before.event_terminated.dapui_config = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_exited.dapui_config = function()
+				dapui.close()
+			end
+
+			vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
+			vim.keymap.set("n", "<leader>dc", dap.continue, {})
 		end,
 		event = "VeryLazy",
 	},
