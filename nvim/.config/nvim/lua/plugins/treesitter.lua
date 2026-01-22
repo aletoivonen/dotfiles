@@ -8,6 +8,7 @@ return {
 			"lua",
 			"html",
 			"css",
+      "cpp",
 			"c_sharp",
 			"razor",
 			"hyprlang",

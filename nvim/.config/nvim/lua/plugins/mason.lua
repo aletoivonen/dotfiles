@@ -14,6 +14,36 @@ return {
 		},
 	},
 	{
+		"p00f/clangd_extensions.nvim",
+		lazy = true,
+		config = function() end,
+		opts = {
+			inlay_hints = {
+				inline = false,
+			},
+			ast = {
+				--These require codicons (https://github.com/microsoft/vscode-codicons)
+				role_icons = {
+					type = "",
+					declaration = "",
+					expression = "",
+					specifier = "",
+					statement = "",
+					["template argument"] = "",
+				},
+				kind_icons = {
+					Compound = "",
+					Recovery = "",
+					TranslationUnit = "",
+					PackExpansion = "",
+					TemplateTypeParm = "",
+					TemplateTemplateParm = "",
+					TemplateParamObject = "",
+				},
+			},
+		},
+	},
+	{
 		"seblyng/roslyn.nvim",
 		---@module 'roslyn.config'
 		---@type RoslynNvimConfig
@@ -63,6 +93,58 @@ return {
 		end,
 	},
 	{
+		"khoido2003/roslyn-filewatch.nvim",
+		config = function()
+			require("roslyn_filewatch").setup({
+				client_names = { "roslyn_ls", "roslyn", "roslyn_lsp" },
+				ignore_dirs = {
+					"Library",
+					"Temp",
+					"Logs",
+					"Obj",
+					"Bin",
+					".git",
+					".idea",
+					".vs",
+				},
+
+				-- Glob pattern exclusions (gitignore-style, like VS Code's files.watcherExclude)
+				-- Empty by default. Examples:
+				ignore_patterns = {
+					-- "*.generated.cs",      -- exclude generated files
+					-- "**/*.Designer.cs",    -- exclude designer files anywhere
+					-- "**/obj/**",           -- exclude obj directory contents
+					-- "!**/important/**",    -- but include important directory (negation)
+				},
+
+				watch_extensions = { ".cs", ".csproj", ".sln", ".slnx", ".slnf", ".props", ".targets" },
+				batching = {
+					enabled = true,
+					interval = 300,
+				},
+
+				poll_interval = 3000, -- fs_poll interval (ms)
+				poller_restart_threshold = 2, -- restart poller if idle for N seconds
+				watchdog_idle = 60, -- restart watcher if idle for N seconds
+				rename_detection_ms = 300, -- window to detect delete+create → rename
+				processing_debounce_ms = 80, -- debounce high-frequency events
+
+				-- Solution-aware watching: parse .sln/.slnx/.slnf to limit watch scope to project dirs only
+				-- Reduces I/O significantly on large repositories. Set to false to scan entire root.
+				solution_aware = true, -- (default: true)
+
+				-- Respect .gitignore patterns when scanning files.
+				-- Automatically skips files matching .gitignore rules.
+				respect_gitignore = true, -- (default: true)
+
+				-- Control verbosity of plugin notifications:
+				--   TRACE < DEBUG < INFO < WARN < ERROR
+				-- Default: WARN (only warnings & errors are shown)
+				log_level = vim.log.levels.WARN,
+			})
+		end,
+	},
+	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {},
 		dependencies = {
@@ -71,7 +153,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls" },
+				ensure_installed = { "lua_ls", "ts_ls", "clangd" },
 			})
 		end,
 	},
@@ -82,6 +164,7 @@ return {
 			require("lint").linters_by_ft = {
 				csharp = { "cspell" },
 				javascript = { "prettierd", "prettier" },
+        -- cpp = { "cpplint" },
 			}
 
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
@@ -99,13 +182,13 @@ return {
 	},
 	{
 		"stevearc/conform.nvim",
-		opts = {},
 		config = function()
 			local conform = require("conform")
 
 			conform.setup({
 				formatters_by_ft = {
 					csharp = { "csharpier" },
+					cpp = { "clang-format" },
 					lua = { "stylua" },
 					javascript = { "prettierd", "prettier", stop_after_first = true },
 				},

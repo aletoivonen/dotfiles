@@ -18,7 +18,31 @@ return {
 			local dap = require("dap")
 			local dapui = require("dapui")
 
-      require("nvim-dap-unity").setup()
+			dap.configurations.cpp = {
+				{
+					name = "Launch",
+					type = "lldb",
+					request = "launch",
+					program = function()
+						return vim.fn.input("path to executable: ", vim.fn.getcwd() .. "/", "file")
+					end,
+					cwd = "${workspaceFolder}",
+					stopOnEntry = false,
+					args = {},
+					runInTerminal = true,
+				},
+			}
+
+			dap.adapters.lldb = {
+				type = "server",
+				port = "${port}",
+				executable = {
+					command = "codelldb",
+					args = { "--port", "${port}" },
+				},
+			}
+
+			require("nvim-dap-unity").setup()
 
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
@@ -34,6 +58,7 @@ return {
 			end
 
 			vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
+			vim.keymap.set("n", "<F5>", dap.continue, {})
 			vim.keymap.set("n", "<leader>dc", dap.continue, {})
 		end,
 		event = "VeryLazy",
