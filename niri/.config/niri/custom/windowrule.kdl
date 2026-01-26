@@ -1,0 +1,100 @@
+window-rule {
+	match app-id="alacritty"
+	opacity 0.8
+    }
+
+    window-rule {
+	match app-id="jetbrains-rider"
+	draw-border-with-background false
+	opacity 0.9
+    }
+
+    window-rule {
+	match app-id="jetbrains-rider" is-floating=true
+	open-focused false
+    }
+
+    window-rule {
+        match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+        open-floating true // Always float Firefox PiP windows
+    }
+
+    window-rule {
+        geometry-corner-radius 8 // Set every window radius to 20
+        clip-to-geometry true
+    }
+
+    window-rule {
+        match app-id="discord"
+	draw-border-with-background false
+	opacity 0.9
+        open-on-output "HDMI-A-1"
+        default-column-width { proportion 1.0; }
+        default-window-height { proportion 0.5; }
+    	//default-column-display "tabbed"
+    }
+
+    window-rule {
+	match app-id="discord" is-floating=true
+	opacity 1.0
+    }
+
+    window-rule {
+	match app-id="steam"
+	open-floating false
+    }
+
+    window-rule {
+        match title="Steam"
+	open-floating false
+        open-on-output "HDMI-A-2"
+        default-column-width { proportion 0.5; }
+        default-window-height { proportion 1.0; }
+    }
+
+    window-rule {
+	match app-id="steam" title="^notificationtoasts"
+	open-focused false
+	open-floating true
+    	default-floating-position x=16 y=16 relative-to="bottom-right"
+    	block-out-from "screencast"
+    }
+
+    window-rule {
+	open-floating false
+        match title="Friends List"
+	draw-border-with-background false
+        open-on-output "HDMI-A-2"
+        default-column-width { proportion 0.25; }
+        default-window-height { proportion 1.0; }
+    }
+
+    window-rule {
+	match app-id="steam"
+	opacity 0.85
+	draw-border-with-background false
+    }
+
+    window-rule {
+	match app-id="alacritty" title="btop";
+
+	open-on-output "HDMI-A-1"
+	default-column-display "tabbed"
+	default-column-width { proportion 1.0; }
+        default-window-height { proportion 0.5; }
+
+    }
+
+    window-rule {
+	match app-id="unity"
+	match app-id="Unity"
+	open-focused true
+	open-floating false
+    }
+
+    //window-rule {
+//	match app-id="unity"
+//	//match is-floating=true
+//	open-focused false
+//	default-floating-position x=16 y=16 relative-to="top-left"
+  //  }
