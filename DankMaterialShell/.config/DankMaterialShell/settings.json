@@ -277,7 +277,7 @@
         {
           "id": "spacer",
           "enabled": true,
-          "size": 70
+          "size": 50
         },
         {
           "id": "workspaceSwitcher",
@@ -286,7 +286,7 @@
         {
           "id": "spacer",
           "enabled": true,
-          "size": 15
+          "size": 10
         },
         {
           "id": "focusedWindow",
@@ -295,7 +295,7 @@
         {
           "id": "spacer",
           "enabled": true,
-          "size": 70
+          "size": 50
         },
         {
           "id": "privacyIndicator",
@@ -303,10 +303,6 @@
         }
       ],
       "rightWidgets": [
-        {
-          "id": "notepadButton",
-          "enabled": true
-        },
         {
           "id": "clock",
           "enabled": true
@@ -323,7 +319,7 @@
         {
           "id": "spacer",
           "enabled": true,
-          "size": 20
+          "size": 10
         },
         {
           "id": "systemTray",
@@ -342,17 +338,13 @@
           "enabled": true
         },
         {
-          "id": "battery",
-          "enabled": true
-        },
-        {
           "id": "colorPicker",
           "enabled": true
         },
         {
           "id": "spacer",
           "enabled": true,
-          "size": 20
+          "size": 10
         },
         {
           "id": "controlCenterButton",
