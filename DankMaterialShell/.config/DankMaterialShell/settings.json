@@ -304,6 +304,10 @@
       ],
       "rightWidgets": [
         {
+          "id": "notepadButton",
+          "enabled": true
+        },
+        {
           "id": "clock",
           "enabled": true
         },
@@ -379,7 +383,7 @@
       "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4,
+      "popupGapsManual": 12,
       "maximizeDetection": true
     },
     {
