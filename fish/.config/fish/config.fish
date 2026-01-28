@@ -12,6 +12,8 @@ zoxide init fish | source
 
 abbr --add cd z
 
+fish_ssh_agent
+
 set -gx EDITOR nvim
 set -gx GTK_THEME PurPurNight-GTK
 set -gx DOTNET_ROOT /home/aleksi/.dotnet/
