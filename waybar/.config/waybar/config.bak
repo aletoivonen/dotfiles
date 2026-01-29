@@ -2,8 +2,8 @@
     "layer": "top",
     "margin-top": 4,
     "margin-bottom": 0,
-    "margin-left": 512,
-    "margin-right": 512,
+    "margin-left": 0,
+    "margin-right": 0,
     "spacing": 8,
 
     "include": [
