@@ -55,9 +55,9 @@
         "all-outputs": false,
         "warp-on-scroll": false,
         "format": "{name}",
-        "persistent-workspaces": {
-          "*": 9
-        }
+        // "persistent-workspaces": {
+        //   "*": 9
+        // }
     },
     "ext/window": {
       "max-length": 40,
