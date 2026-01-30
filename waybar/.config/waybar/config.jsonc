@@ -8,10 +8,11 @@
     // Choose the order of the modules
     "modules-left": [
         "ext/workspaces",
-        "ext/mode",
-        "ext/scratchpad",
         "custom/media",
-        "ext/window"
+        "custom/separator",
+        "wlr/taskbar",
+        "custom/separator",
+        "dwl/window"
     ],
     "modules-center": [
         "sway/window"
@@ -49,6 +50,21 @@
       "format": "|",
       "interval": 0,
       "tooltip": false
+    },
+    "wlr/taskbar":  {
+        "format": "{icon}",
+        "icon-size": 20,
+        "all-outputs": false,
+        "tooltip-format": "{title}",
+        "markup": true,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["Rofi", "wofi"]
+    },
+    "dwl/window": {
+        "format": "{title}",
+        //"on-click":"bash ~/.config/mango/scripts/screenshot.sh",
+        // "max-length": 50
     },
     "ext/workspaces": {
         "disable-scroll": true,
