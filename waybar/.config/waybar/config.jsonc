@@ -1,5 +1,5 @@
 // -*- mode: jsonc -*-
-{
+[{
     "output": ["DP-2"],
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -263,4 +263,71 @@
 			"hibernate": "systemctl hibernate"
 		}
     }
+},
+
+{
+    "output": ["HDMI-A-1", "HDMI-A-2"],
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4, 
+    "modules-left": [
+        "ext/workspaces",
+        // "custom/media",
+        "custom/separator",
+        "wlr/taskbar",
+        "custom/separator",
+        "dwl/window"
+    ],
+    "modules-right": [
+        "tray",
+        "custom/separator",
+        "clock"
+    ],
+    //Modules configuration
+    "custom/separator": {
+      "format": "|",
+      "interval": 0,
+      "tooltip": false
+    },
+    "wlr/taskbar":  {
+        "format": "{icon}",
+        "icon-size": 20,
+        "all-outputs": false,
+        "tooltip-format": "{title}",
+        "markup": true,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["Rofi", "wofi"]
+    },
+    "dwl/window": {
+        "format": "{title}",
+        //"on-click":"bash ~/.config/mango/scripts/screenshot.sh",
+        // "max-length": 50
+    },
+    "ext/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        // "persistent-workspaces": {
+        //   "*": 9
+        // }
+    },
+        "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M %Y-%m-%d}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
 }
+
+]
