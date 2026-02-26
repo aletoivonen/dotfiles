@@ -40,6 +40,8 @@
         //"sway/language",
         //"battery",
         //"battery#bat2",
+        "custom/weather",
+        "custom/separator",
         "clock",
         "custom/separator",
         "tray",
@@ -51,6 +53,13 @@
       "format": "|",
       "interval": 0,
       "tooltip": false
+    },
+    "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json"
     },
     "wlr/taskbar":  {
         "format": "{icon}",
