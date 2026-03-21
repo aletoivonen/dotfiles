@@ -74,7 +74,7 @@
     "dwl/window": {
         "format": "{title}",
         //"on-click":"bash ~/.config/mango/scripts/screenshot.sh",
-        // "max-length": 50
+        "max-length": 64
     },
     "ext/workspaces": {
         "disable-scroll": true,
@@ -119,6 +119,7 @@
 		    "paused": "⏸",
 		    "playing": "▶"
 	    },
+      "max-length": 80,
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
