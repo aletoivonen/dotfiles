@@ -1,9 +1,16 @@
 {
   "currentThemeName": "custom",
-  "currentThemeCategory": "custom",
-  "customThemeFile": "",
-  "registryThemeVariants": {},
-  "matugenScheme": "scheme-tonal-spot",
+  "currentThemeCategory": "registry",
+  "customThemeFile": "/home/aleksi/.config/DankMaterialShell/themes/catppuccin/theme.json",
+  "registryThemeVariants": {
+    "catppuccin": {
+      "dark": {
+        "flavor": "mocha",
+        "accent": "peach"
+      }
+    }
+  },
+  "matugenScheme": "scheme-monochrome",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
