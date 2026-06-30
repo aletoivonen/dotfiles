@@ -109,13 +109,6 @@ animations {
 # ==================
 # LAYOUTS
 # ==================
-dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-    preserve_split = true # You probably want this
-    smart_split = true
-    force_split = 2
-    #permanent_direction_override = true
-}
 master {
     mfact = 0.5
 }
@@ -136,6 +129,7 @@ misc {
     disable_hyprland_logo = true
     disable_splash_rendering = true
     vrr = 1
+    middle_click_paste = false
 }
 
 # ==================

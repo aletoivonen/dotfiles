@@ -208,12 +208,6 @@
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
-  "greeterUse24HourClock": true,
-  "greeterShowSeconds": false,
-  "greeterPadHours12Hour": false,
-  "greeterLockDateFormat": "",
-  "greeterFontFamily": "",
-  "greeterWallpaperFillMode": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -302,6 +296,10 @@
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
   "terminalsAlwaysDark": true,
+  "muxType": "tmux",
+  "muxUseCustomCommand": false,
+  "muxCustomCommand": "",
+  "muxSessionFilter": "",
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
@@ -468,7 +466,9 @@
         },
         {
           "id": "runningApps",
-          "enabled": true
+          "enabled": true,
+          "runningAppsCompactMode": false,
+          "runningAppsCurrentMonitor": true
         }
       ],
       "centerWidgets": [
@@ -619,6 +619,14 @@
           "selectedGpuIndex": 0,
           "pciId": "",
           "minimumWidth": true
+        },
+        {
+          "id": "runningApps",
+          "enabled": true,
+          "runningAppsCompactMode": false,
+          "runningAppsGroupByApp": false,
+          "runningAppsCurrentWorkspace": false,
+          "runningAppsCurrentMonitor": true
         }
       ],
       "centerWidgets": [
