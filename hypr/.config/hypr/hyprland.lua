@@ -398,7 +398,7 @@ hl.bind(mod .. " + " .. "Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
 
 hl.bind(mod .. " + " .. "TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
 
-hl.bind(mod .. " + " .. "B", hl.dsp.exec_cmd("firefox"))
+hl.bind(mod .. " + " .. "B", hl.dsp.exec_cmd("zen-browser"))
 
 hl.bind(mod .. " + " .. "U", hl.dsp.exec_cmd("unityhub"))
 
