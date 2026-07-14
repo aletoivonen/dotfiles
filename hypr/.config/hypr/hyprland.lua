@@ -4,7 +4,6 @@
 
 ---@module 'hl'
 
-
 -- Hyprland Configuration
 
 -- https://wiki.hypr.land/Configuring/
@@ -22,32 +21,32 @@
 --monitor = eDP-1, 1920x1080, auto, 1
 
 hl.monitor({
-    output   = "DP-2",
-    mode     = "2560x1440@143.97",
-    position = "auto",
-    scale    = 1,
+	output = "DP-2",
+	mode = "2560x1440@143.97",
+	position = "auto",
+	scale = 1,
 })
 
 hl.monitor({
-    output   = "HDMI-A-1",
-    mode     = "1920x1080",
-    position = "auto-left",
-    scale    = 1,
-    transform = 3,
+	output = "HDMI-A-1",
+	mode = "1920x1080",
+	position = "auto-left",
+	scale = 1,
+	transform = 3,
 })
 
 hl.monitor({
-    output   = "HDMI-A-2",
-    mode     = "2560x1440@120",
-    position = "auto-right",
-    scale    = 1,
+	output = "HDMI-A-2",
+	mode = "2560x1440@120",
+	position = "auto-right",
+	scale = 1,
 })
 
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "auto",
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = "auto",
 })
 
 -- ==================
@@ -56,9 +55,7 @@ hl.monitor({
 
 -- ==================
 
-
 local hs = require("hyprsplit")
-
 
 -- source = ~/.config/hypr/myColors.conf
 
@@ -77,28 +74,28 @@ local hs = require("hyprsplit")
 -- ==================
 
 hl.config({
-    input = {
-        kb_layout = "fi",
-        numlock_by_default = true,
-        follow_mouse = 1,
-        mouse_refocus = false,
-        sensitivity = -0.4,
-        -- -1.0 - 1.0, 0 means no modification.
-        touchpad = {
-            natural_scroll = true,
-        },
-    },
+	input = {
+		kb_layout = "fi",
+		numlock_by_default = true,
+		follow_mouse = 1,
+		mouse_refocus = false,
+		sensitivity = -0.4,
+		-- -1.0 - 1.0, 0 means no modification.
+		touchpad = {
+			natural_scroll = true,
+		},
+	},
 })
 
 hl.device({
-    name = "elan0511:01-04f3:303f-touchpad",
-    sensitivity = 0.15,
+	name = "elan0511:01-04f3:303f-touchpad",
+	sensitivity = 0.15,
 })
 
 hl.config({
-    debug = {
-        disable_logs = false,
-    },
+	debug = {
+		disable_logs = false,
+	},
 })
 
 -- ==================
@@ -108,18 +105,18 @@ hl.config({
 -- ==================
 
 hl.config({
-    general = {
-        gaps_in = 3,
-        gaps_out = 3,
-        border_size = 5,
-        -- off in niri
-        resize_on_border = false,
-        layout = "scrolling",
-        col = {
-            active_border = "rgba(fab387ff)",
-            inactive_border = "rgba(595959ff)",
-        },
-    },
+	general = {
+		gaps_in = 3,
+		gaps_out = 3,
+		border_size = 5,
+		-- off in niri
+		resize_on_border = false,
+		layout = "scrolling",
+		col = {
+			active_border = "rgba(fab387ff)",
+			inactive_border = "rgba(595959ff)",
+		},
+	}
 })
 
 -- ==================
@@ -129,18 +126,18 @@ hl.config({
 -- ==================
 
 hl.config({
-    decoration = {
-        rounding = 2,
-        active_opacity = 1.0,
-        --inactive_opacity = 0.85
-        shadow = {
-            enabled = false,
-            range = 4,
-            render_power = 5,
-            offset = "0 5",
-            color = "rgba(00000070)",
-        },
-    },
+	decoration = {
+		rounding = 2,
+		active_opacity = 1.0,
+		--inactive_opacity = 0.85
+		shadow = {
+			enabled = false,
+			range = 4,
+			render_power = 5,
+			offset = "0 5",
+			color = "rgba(00000070)",
+		},
+	},
 })
 
 -- ==================
@@ -150,9 +147,9 @@ hl.config({
 -- ==================
 
 hl.config({
-    animations = {
-        enabled = true,
-    },
+	animations = {
+		enabled = true,
+	},
 })
 
 -- ==================
@@ -162,20 +159,20 @@ hl.config({
 -- ==================
 
 hl.config({
-    master = {
-        mfact = 0.5,
-    },
+	master = {
+		mfact = 0.5,
+	},
 })
 
 hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
-        column_width = 0.5,
-        focus_fit_method = 1,
-        follow_focus = true,
-        explicit_column_widths = "0.2, 0.333, 0.5, 0.667, 0.900, 1.0",
-        -- follow_min_visible = 0.0
-    },
+	scrolling = {
+		fullscreen_on_one_column = true,
+		column_width = 0.5,
+		focus_fit_method = 1,
+		follow_focus = true,
+		explicit_column_widths = "0.2, 0.333, 0.5, 0.667, 0.900, 1.0",
+		-- follow_min_visible = 0.0
+	},
 })
 
 -- ==================
@@ -185,12 +182,12 @@ hl.config({
 -- ==================
 
 hl.config({
-    misc = {
-        disable_hyprland_logo = true,
-        disable_splash_rendering = true,
-        vrr = 1,
-        middle_click_paste = false,
-    },
+	misc = {
+		disable_hyprland_logo = true,
+		disable_splash_rendering = true,
+		vrr = 1,
+		middle_click_paste = false,
+	},
 })
 
 -- ==================
@@ -200,166 +197,165 @@ hl.config({
 -- ==================
 
 hl.window_rule({
-    name  = "match_class___org__w",
-    match = {
-        class = "tile true",
-    },
-    -- TODO: review rule: "match:class ^(org\\.wezfurlong\\.wezterm)$"
+	name = "match_class___org__w",
+	match = {
+		class = "tile true",
+	},
+	-- TODO: review rule: "match:class ^(org\\.wezfurlong\\.wezterm)$"
 })
 
 hl.window_rule({
-    name  = "match_class___org__g",
-    match = {
-        class = "rounding=12",
-    },
-    -- TODO: review rule: "match:class ^(org\\.gnome\\.)"
+	name = "match_class___org__g",
+	match = {
+		class = "rounding=12",
+	},
+	-- TODO: review rule: "match:class ^(org\\.gnome\\.)"
 })
 
 hl.window_rule({
-    name  = "match_class___org__g",
-    match = {
-    },
-    -- TODO: review rule: "match:class ^(org\\.gnome\\.) border_size=0"
+	name = "match_class___org__g",
+	match = {},
+	-- TODO: review rule: "match:class ^(org\\.gnome\\.) border_size=0"
 })
 
 hl.window_rule({
-    name  = "match_class___gnome-",
-    match = {
-        class = "tile=true",
-    },
-    -- TODO: review rule: "match:class ^(gnome-control-center)$"
+	name = "match_class___gnome-",
+	match = {
+		class = "tile=true",
+	},
+	-- TODO: review rule: "match:class ^(gnome-control-center)$"
 })
 
 hl.window_rule({
-    name  = "match_class___pavuco",
-    match = {
-        class = "tile=true",
-    },
-    -- TODO: review rule: "match:class ^(pavucontrol)$"
+	name = "match_class___pavuco",
+	match = {
+		class = "tile=true",
+	},
+	-- TODO: review rule: "match:class ^(pavucontrol)$"
 })
 
 hl.window_rule({
-    name  = "match_class___nm-con",
-    match = {
-        class = "tile=true",
-    },
-    -- TODO: review rule: "match:class ^(nm-connection-editor)$"
+	name = "match_class___nm-con",
+	match = {
+		class = "tile=true",
+	},
+	-- TODO: review rule: "match:class ^(nm-connection-editor)$"
 })
 
 hl.window_rule({
-    name  = "match_class___gnome-",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(gnome-calculator)$"
+	name = "match_class___gnome-",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(gnome-calculator)$"
 })
 
 hl.window_rule({
-    name  = "match_class___galcul",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(galculator)$"
+	name = "match_class___galcul",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(galculator)$"
 })
 
 hl.window_rule({
-    name  = "match_class___bluema",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(blueman-manager)$"
+	name = "match_class___bluema",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(blueman-manager)$"
 })
 
 hl.window_rule({
-    name  = "match_class___org__g",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(org\\.gnome\\.Nautilus)$"
+	name = "match_class___org__g",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(org\\.gnome\\.Nautilus)$"
 })
 
 --windowrule = match:class ^(steam)$, float = true
 
 hl.window_rule({
-    name  = "match_class___xdg-de",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(xdg-desktop-portal)$"
+	name = "match_class___xdg-de",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(xdg-desktop-portal)$"
 })
 
 hl.window_rule({
-    name  = "match_class___org__w",
-    match = {
-        class = "border_size=0",
-    },
-    -- TODO: review rule: "match:class ^(org\\.wezfurlong\\.wezterm)$"
+	name = "match_class___org__w",
+	match = {
+		class = "border_size=0",
+	},
+	-- TODO: review rule: "match:class ^(org\\.wezfurlong\\.wezterm)$"
 })
 
 hl.window_rule({
-    name  = "match_class___kitty_",
-    match = {
-        class = "border_size=0",
-    },
-    -- TODO: review rule: "match:class ^(Kitty)$"
+	name = "match_class___kitty_",
+	match = {
+		class = "border_size=0",
+	},
+	-- TODO: review rule: "match:class ^(Kitty)$"
 })
 
 hl.window_rule({
-    name  = "match_class___zen__",
-    match = {
-        class = "border_size=0",
-    },
-    -- TODO: review rule: "match:class ^(zen)$"
+	name = "match_class___zen__",
+	match = {
+		class = "border_size=0",
+	},
+	-- TODO: review rule: "match:class ^(zen)$"
 })
 
 hl.window_rule({
-    name  = "match_class___com__m",
-    match = {
-        class = "border_size=0",
-    },
-    -- TODO: review rule: "match:class ^(com\\.mitchellh\\.ghostty)$"
+	name = "match_class___com__m",
+	match = {
+		class = "border_size=0",
+	},
+	-- TODO: review rule: "match:class ^(com\\.mitchellh\\.ghostty)$"
 })
 
 hl.window_rule({
-    name  = "match_class___kitty_",
-    match = {
-        class = "border_size=0",
-    },
-    -- TODO: review rule: "match:class ^(kitty)$"
+	name = "match_class___kitty_",
+	match = {
+		class = "border_size=0",
+	},
+	-- TODO: review rule: "match:class ^(kitty)$"
 })
 
 hl.window_rule({
-    name  = "match_class___firefo",
-    match = {
-        class = "title ^(Picture-in-Picture)$",
-    },
-    -- TODO: review rule: "match:class ^(firefox)$"
+	name = "match_class___firefo",
+	match = {
+		class = "title ^(Picture-in-Picture)$",
+	},
+	-- TODO: review rule: "match:class ^(firefox)$"
 })
 
 hl.window_rule({
-    name  = "match_class___zoom__",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(zoom)$"
+	name = "match_class___zoom__",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(zoom)$"
 })
 
 -- DMS windows floating by default
 
 hl.window_rule({
-    name  = "match_class___org_qu",
-    match = {
-        class = "float=true",
-    },
-    -- TODO: review rule: "match:class ^(org.quickshell)$"
+	name = "match_class___org_qu",
+	match = {
+		class = "float=true",
+	},
+	-- TODO: review rule: "match:class ^(org.quickshell)$"
 })
 
 hl.window_rule({
-    name  = "opacity_0_9_0_9",
-    match = {
-        class = "float=false",
-    },
-    opacity = "0.9 0.9",
+	name = "opacity_0_9_0_9",
+	match = {
+		class = "float=false",
+	},
+	opacity = "0.9 0.9",
 })
 
 --layerrule = noanim, ^(quickshell)$
@@ -446,7 +442,6 @@ hl.bind(mod .. " + " .. "W", hl.dsp.group.toggle())
 
 -- === Focus Navigation ===
 
-
 hl.bind(mod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))
 
 hl.bind(mod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
@@ -454,7 +449,6 @@ hl.bind(mod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mod .. " + " .. "up", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mod .. " + " .. "right", hl.dsp.focus({ direction = "right" }))
-
 
 hl.bind(mod .. " + " .. "H", hl.dsp.focus({ direction = "left" }))
 
@@ -464,9 +458,7 @@ hl.bind(mod .. " + " .. "K", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mod .. " + " .. "L", hl.dsp.focus({ direction = "right" }))
 
-
 -- === Window Movement ===
-
 
 hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.window.move({ direction = "left" }))
 
@@ -474,8 +466,6 @@ hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "down", hl.dsp.window.move({ directi
 hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "up", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "right", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "period", hl.dsp.layout("promote"))
-
-
 
 -- === Column Navigation ===
 
@@ -519,9 +509,9 @@ hl.bind(mod .. " + " .. "SHIFT + CTRL" .. " + " .. "L", hl.dsp.window.move({ mon
 
 hs.config({ num_workspaces = 10 })
 for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind("SUPER + " .. key, hs.dsp.focus({ workspace = i }))
-    hl.bind("SUPER + SHIFT + " .. key, hs.dsp.window.move({ workspace = i, follow = false }))
+	local key = i % 10 -- 10 maps to key 0
+	hl.bind("SUPER + " .. key, hs.dsp.focus({ workspace = i }))
+	hl.bind("SUPER + SHIFT + " .. key, hs.dsp.window.move({ workspace = i, follow = false }))
 end
 
 hl.bind("SUPER + " .. "g", hs.dsp.grab_rogue_windows())
@@ -725,12 +715,15 @@ hl.bind(mod .. " + " .. "I", hl.dsp.exec_cmd("dms ipc call keybinds toggle hyprl
 
 hl.bind(mod .. " + " .. "P", hl.dsp.exec_cmd("dms ipc call notepad toggle"))
 
-hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "C", hl.dsp.exec_cmd("kitty -e bash -c 'hyprctl clients -j; echo Press any key to exit.. ; read -n1'"))
+hl.bind(
+	mod .. " + " .. "SHIFT" .. " + " .. "C",
+	hl.dsp.exec_cmd("kitty -e bash -c 'hyprctl clients -j; echo Press any key to exit.. ; read -n1'")
+)
 
 -- Autostart
 hl.on("hyprland.start", function()
-    hl.exec_cmd("dbus-update-activation-environment --systemd --all")
-    hl.exec_cmd("systemctl --user start hyprland-session.target")
-    hl.exec_cmd("bash -c wl-paste --watch cliphist store &")
-    hl.exec_cmd("hyprpm reload -n")
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
+	hl.exec_cmd("bash -c wl-paste --watch cliphist store &")
+	hl.exec_cmd("hyprpm reload -n")
 end)
