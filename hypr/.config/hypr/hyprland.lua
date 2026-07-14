@@ -468,14 +468,11 @@ hl.bind(mod .. " + " .. "L", hl.dsp.focus({ direction = "right" }))
 -- === Window Movement ===
 
 
-hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.layout("movewindowto l"))
+hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.window.move({ direction = "left" }))
 
-hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "down", hl.dsp.layout("movewindowto d"))
-
-hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "up", hl.dsp.layout("movewindowto u"))
-
-hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "right", hl.dsp.layout("movewindowto r"))
-
+hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "down", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "right", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mod .. " + " .. "SHIFT" .. " + " .. "period", hl.dsp.layout("promote"))
 
 
