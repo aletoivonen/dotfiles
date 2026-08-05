@@ -20,3 +20,6 @@ set -gx DOTNET_ROOT /home/aleksi/.dotnet/
 
 export FZF_CTRL_T_OPTS="--bind 'ctrl-p:toggle-preview' --preview-window=right:60%:hidden --preview 'bat --color=always --style=numbers,changes,header {}'"
 
+
+# opencode
+fish_add_path /home/aleksi/.opencode/bin
