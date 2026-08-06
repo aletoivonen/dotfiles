@@ -23,3 +23,8 @@ export FZF_CTRL_T_OPTS="--bind 'ctrl-p:toggle-preview' --preview-window=right:60
 
 # opencode
 fish_add_path /home/aleksi/.opencode/bin
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/aleksi/.lmstudio/bin
+# End of LM Studio CLI section
+
