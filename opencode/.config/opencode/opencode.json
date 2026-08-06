@@ -1,15 +1,22 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "ollama": {
+    "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama Local",
+      "name": "LM Studio (local)",
       "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
+        "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "carstenuhlig/omnicoder-9b:latest": {
-          "name": "Omnicoder 9b"
+        "lmstudio-community/Qwen3.5-9B-GGUF": {
+          "name": "qwen3.5-9b"
+        },
+        "lmstudio-community/Qwen3.5-0.8B-GGUF": {
+          "name": "qwen3.5-0.8b"
+        },
+        "minicpm5-1b-claude-opus-fable5-thinking": {
+          "name": "MiniCPM5",
+          "thinking": "true"
         }
       }
     }
